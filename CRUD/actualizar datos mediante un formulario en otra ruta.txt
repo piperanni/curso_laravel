@@ -1,0 +1,22 @@
+crear vista:
+	- crear archivo html formulario_actualizar.blade.php
+	- crear formulario:
+			- incluir metodo post
+			- incluir directiva @crfc y @method('put')
+			- en el furmulario espicificar la ruta donde enviará el contenido del formulario
+			  <form action="{{route('curso.update',$curso_by_id)}}" method="POST">
+        			@csrf
+        			@method('put')
+
+
+crear las rutas :
+	- crear ruta para la vista del formulario:
+			la vista necesita en la ruta de un id del curso para mostrar los datos en el formulario de relleno
+ 
+	- crear ruta para la logica del formulario es decir el proceso de actualizar
+		la ruta para la logica tambien necesita recibir un id de un curso para saber a que curso actualizar los datos
+
+crear los controladores:
+	-controlador para retornar la vista
+	- controlador para ejecutar logica de actualizar
+
