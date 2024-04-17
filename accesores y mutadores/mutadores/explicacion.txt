@@ -1,0 +1,6 @@
+un mutador es una manera de controlar como se almacenan los datos en la base de datos
+
+una  manera de evitar errores de insercion de datos 
+ej: controlar la manera en que se almacenan los datos, si un usuario escribe en un formulario de manera erronea
+podemos cambiar la cadena de texto antes de enviarlo a la base de datos(migrate).
+

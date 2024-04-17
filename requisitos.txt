@@ -1,0 +1,18 @@
+instalar:
+PHP mas bien XAMPP que es un entorno de desarrollo de php 
+Manejador de dependencias : Composer
+
+adicionalmente instalar node.js y npm
+
+pasos:
+si trabajas con xampp debes crear los proyectos en la carpeta htdoc
+ abrir con gitbash y poner el comando:
+composer create-project laravel/laravel example-app
+
+hay que averiguar que conviene mas trabajar con la crecion de proyectos convencional
+o el instalador que ofrece laravel
+
+
+extensiones en vsc:
+
+laravel blade formatter

@@ -1,0 +1,59 @@
+en el archivo databaseSeeder.php
+que es donde se cargan los datos preescritos para que se carguen cada vez que se inicie un migrate
+
+ $curso = new Curso();
+
+        $curso->name = "laravel";
+        $curso->description = "lorem impsum";
+        
+        $curso->categoria = "desarrollo wrb";
+
+        $curso->save(); 
+        
+----------------------
+
+ejecutar los registros seeder:
+
+php artisan migration:fresh
+php artisan db:seed
+
+-------------------------------------------------------------------------
+crear archivo que modularise o separe cada seeder segun los registros de una tabla en especifico
+
+php artisan make:seeder CursoSeeder
+
+
+luego:
+
+ crea el codigo para generar los registros
+public function run(): void
+    {
+        $curso = new Curso();
+
+        $curso->name = "laravel";
+        $curso->description = "lorem impsum";
+        
+        $curso->categoria = "desarrollo wrb";
+
+        $curso->save();
+    }
+
+
+finalmente se debe mandar a llamar desde el archivo de la base de datos del seeder.
+
+ public function run(): void
+    {
+        $this->call(CursoSeeder::class); // llamando a la clase cursoSeeder
+        
+
+
+    }
+
+
+Nota:
+
+para eliminar todas la tablas y crearlas de nuevo con el comando php artisan migrate:fresh
+
+y despues llamar a los registros seeder : php artisan db:seed
+
+existe un comando que hace las dos cosas : php artisan migrate:fresh --seed

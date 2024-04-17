@@ -1,0 +1,22 @@
+las migraciones se eliminan con el metodo down creado en el archivo php de las migraciones
+
+para eliminar una migracion se debe especificar a que lote pertenece y el lote se consigue en la tabla creada llamada migrations que almacena los datos de las migraciones y el campo batch sale un numero que corresponde al lote.
+
+php artisan migrate:rollback // si no se especifica el lote este eliminará el numero mayor de lote.
+
+
+--------------------------------------------------------
+
+para eliminar un archivo de migraciones es necesario hacer un rollback primero para no tener problemas.
+
+--------------
+php artisan migrate:fresh lo que haces es eliminar todas las migraciones mediante el metodo down luego
+
+crea todas las tablas de nuevo a la base de datos.
+
+utilizado mayormente para actualizar un campo nuevo a una migracion ( quizas existan mejores opciones por ver dutante el  curso)
+
+
+
+
+

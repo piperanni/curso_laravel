@@ -1,0 +1,45 @@
+php artisan tinker
+
+ use App\Models\Curso;  // para poder acceder a la clase curso
+
+ $cursos = Curso::all();  // recuperar todos los registros de la tabla
+
+$cursos = Curso::where('categoria','desarrollo')->get(); // recuperar datos con condicionales
+
+// where recibe dos parametros el campo de la tabla y lo que se desea buscar de ese campo
+
+
+$cursos = Curso::where('categoria','desarrollo')->orderBy('id','desc')->get();  // ordenar por algun campo
+
+$cursos = Curso::where('categoria','desarrollo')->orderBy('id','desc')->first(); // obtener el primer elemento
+
+$cursos = Curso::select('id','name')->where('categoria','desarrollo')->orderBy('id','desc')->get(); 
+// hacer una consulta y devolver los campos que se requieran solamente
+
+$cursos = Curso::select('id as identificador','name as nombreCurso')->where('categoria','desarrollo')->orderBy('id','desc')->get();  // poner un alias a los campos de la tabla.
+
+
+cliente pide hacer la misma consulta pero los primeros 20 elementos de los registros en orden asc
+
+$cursos = Curso::select('id as identificador','name as nombreCurso')->where('categoria','desarrollo')->orderBy('id')->take(5)->get();
+
+// buscar un elemento por id de manera rapida
+
+$cursos = Curso::find(20)
+
+// usando find y select
+$cursos = Curso::select('name','description')->find(20);
+
+
+//where con operadores de comparacion
+
+$cursos = Curso::where('id','<','15')->get();
+
+
+// se pide buscar por nombres que contengan alguna palabra  palabra clave like y %palabra a buscar%
+
+ $cursos = Curso::where('name','like','%voluptate%')->get();   
+notas:
+
+el metodo get devuelve un arreglo
+ 

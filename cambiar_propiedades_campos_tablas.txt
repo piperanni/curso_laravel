@@ -1,0 +1,2 @@
+para cambiar la propiedad de un campo(cambiar tipo de dato, cant. de caracteres , etc)
+se debe primero crear

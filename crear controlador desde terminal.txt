@@ -1,0 +1,20 @@
+un controlador en laravel maneja la logica de la aplicacion y no es mas que un archivo php.
+
+laravel permite crear la estructura de este archivo mediante terminal:
+
+php artisan make
+sirve para crear distintos controladores, modelos y migraciones
+
+$ php artisan make:controller homeController
+
+crea un controlador llamado homeControler termina asi x convencion.
+
+a cada ruta se le asigna un controllador 
+
+
+convenciones para llamar a los metodos de un controlador
+
+show = para mostrar datos
+index = para mostrar la pagina principal
+create = formularios
+

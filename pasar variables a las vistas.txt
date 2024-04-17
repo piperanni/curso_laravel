@@ -1,0 +1,22 @@
+metodo1:
+
+en el controlador:
+
+ public function show($curso)
+    {
+        return view('cursos.show',compact('curso')); 
+
+    }
+
+compact recive un stringo o un array de las variables pasadas en la funcion del controlador
+el método compact() así:
+
+php
+return view('miVista', compact('nombre', 'edad'));
+Esto es equivalente a:
+
+php
+return view('miVista', ['nombre' => $nombre, 'edad' => $edad]);
+
+
+

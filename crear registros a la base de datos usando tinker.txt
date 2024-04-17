@@ -1,0 +1,26 @@
+Tinker es una consola de comandos con la que podremos interactuar con todas las clases y métodos de nuestra aplicación.
+
+para crear un registros debemos ingresar a la consola de comandos tinker:
+
+php artisan tinker
+
+luego crear los registros:
+
+1.- buscamos la ruta donde se encuentra la ruta de la clase modelo
+ej:
+
+use  App\Models\Curso;  
+
+2.- crear una instancia del objeto
+  $curso = new Curso;
+
+3.- asignar valores a las propiedades de las clases para que se reflejen posteriormente a la base de datos
+
+   $curso->nombre_propiedad = 'valor';
+
+4.- guardar los cambios y reflejarlos en la base de datos
+
+   $curso->save();
+
+
+

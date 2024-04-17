@@ -1,0 +1,2 @@
+se debe crear primero una nueva migracion que haga alucion al campo que queremos agregar
+php artisan make:migration add_nombreCampo_to_nombreTabla_table

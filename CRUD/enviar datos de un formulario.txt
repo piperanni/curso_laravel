@@ -1,0 +1,3 @@
+para enviar datos por medio del metodo post laravel exige un token 
+
+los datos enviados por el formulario se almacenan en tu objeto de tipo request

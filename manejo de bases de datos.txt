@@ -1,0 +1,15 @@
+dirigirse a la carpeta config y modificar la el array asociativo: 
+ 
+    'default' => env('DB_CONNECTION', 'sqlite'),
+    'default' => 'mysql'
+
+
+
+migraciones:
+
+primero se debe ingresar a la ruta del proyecto y con una terminal o la terminal del vsc
+ php artesan migrate
+
+
+TENER EN CUENTA LA CODIFICACION UTF QUE TENGA EL SERVIDOR Y QUE TIENE QUE SER COMPATIBLE CON LA VARIABLE DE ENTORNO
+DB_COLLATION=utf8mb4_unicode_ci

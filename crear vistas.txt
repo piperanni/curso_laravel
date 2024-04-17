@@ -1,0 +1,9 @@
+las vistas se almacenan en el la carpeta resources/views
+
+si la aplicacion se divide en varias categorias
+ejemplos cursos:
+
+crearemos una carpeta llamada cursos y adentro escribiremos los archivos php que contendra el html necesario
+
+por convencion se nombran a los archivos igual que se nombran a los metodos de los controladores.
+

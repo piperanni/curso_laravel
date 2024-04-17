@@ -1,0 +1,4 @@
+ $funcion_flecha = fn()=> "soy una funcion flecha";
+
+// mostrar por pantalla
+ echo $funcion_flecha();

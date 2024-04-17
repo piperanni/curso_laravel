@@ -1,0 +1,13 @@
+  
+usando el metodo parametro get que es un paremetro de tipo funcion o callback que espera un valor y devuelve ese valor con la condicion que le pidamos
+protected function name(): Attribute{
+        return new Attribute( // set es un parametro de la clase atribute 
+            get:function($value){
+                return ucwords($value); // ucwords devuelve la cadena capitalizada.
+            },
+
+
+            set:function($value){
+                return strtolower($value);
+            }
+        );

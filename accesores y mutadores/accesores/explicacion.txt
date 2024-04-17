@@ -1,0 +1,2 @@
+un accesor hace lo mismo que un mutador pero al revez es decir cuando queremos representar los datos que estan en la base de datos de otra manera, por ejemplo para mostrarlo con otro formato al cliente.
+

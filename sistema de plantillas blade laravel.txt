@@ -1,0 +1,46 @@
+primer paso: dentro de la carpeta view crear un carpeta llamada layouts y dentro ponerl las plantillas
+que tendras la extencion .blade.php
+
+dentro del archivo plantilla.blade.php
+
+crear la estructura html que sera de plantilla
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@yield('title')</title>
+</head>
+<body>
+    <!-- header-->
+    <!-- nav-->
+     @yield('content')
+     
+</body>
+</html>
+
+
+-------------------------
+
+las palabras claves son yield que es reproducir que tendra un nombre que sera usado por el archivo que usará la 
+plantilla.
+
+
+paso2: cambiar la extencion de los archivos vistas poniendo .blade.php
+ llamar a la plantilla:
+
+@extends('layouts.plantilla')
+
+luego llamar a la secciones que necesitas de la plantilla
+
+@extends('layouts.plantilla')
+
+@section('title','home') // para 
+    
+@section('content')
+    <h1> bienvenido a la pagina principal index</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, autem!</p>    
+@endsection
+
+

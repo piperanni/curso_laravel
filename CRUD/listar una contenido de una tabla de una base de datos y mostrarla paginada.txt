@@ -1,0 +1,25 @@
+en el controlador CourseController.php
+
+public function index()
+    {
+        $cursos = Curso::paginate(); // paginate metodo para devolver los datos de la bd paginado 
+        
+        return view('cursos.index',compact('cursos')); // es la manera de llamar al archivo html dentro de una carpete
+                                    // cursos. index hace alucion a que index esta dentro de la carpeta index
+    }
+
+
+2.- luego en el archivo vista:
+
+@extends('layouts.plantilla')
+
+@section('title','home')<!-- modo de cambiar palabras como el titulo --> 
+    
+@section('content') <!-- modo poner mas de una etiqueta html --> 
+    <h1> bienvenido a la pagina principal index</h1>
+    <ul>
+        @foreach ($cursos as $curso)
+          <li>{{$curso->id}}- {{$curso->name}}</li>  
+        @endforeach    
+    </ul>    
+@endsection

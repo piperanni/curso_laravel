@@ -1,0 +1,16 @@
+se agregar un mutador en los archivos de modelos
+
+ // un metodo protected solo puede ser usado por una clase o clases que hereden de ella
+    // haciendo que no se pueda acceder desde afuera, uso exclusivo de la clase
+
+use Illuminate\Database\Eloquent\Casts\Attribute;    
+
+protected function name(): Attribute{ // la funcion debe tener el mismo nombre que el campo de la tabla que se desea
+				         controlar
+        return new Attribute( // set es un parametro de la clase atribute 
+            set:function($value){
+                return strtolower($value);
+            }
+        );
+        // retornara una clase atributo
+    }

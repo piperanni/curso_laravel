@@ -1,0 +1,9 @@
+funciona en base mvc (modelo vista controlador)
+se basa en el patron front - controler quiere decir que el usuario accede a un unico punto de entrada para la aplicacion dentro de la carpeta public 	
+
+sistema de rutas:
+Route::get('/ruta', function () {
+    return '¡Hola, mundo!';
+});
+
+Route es una clase y :: operador para llamar a los metodos o propiedades

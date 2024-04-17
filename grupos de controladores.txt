@@ -1,0 +1,16 @@
+se pueden agrupar los controladores para ordenara las rutas que trabajen con un controlador en comun
+
+in laravel we can create a group of controller
+
+Route::controller(nombrecontrolador::class)->group(function(){
+    // pagina principal de cursos
+    Route::get('nombreRuta','nombreMetodo',); 
+
+    // formulario crear cursos    
+    Route::get('cursos/create','create');
+    
+    // ruta para mostrar los cursos
+    Route::get('cursos/{curso}','show');
+
+
+}); // el signo -> sirve para acceder a metodos y propiedades exclusivas del tipo de datos objeto
